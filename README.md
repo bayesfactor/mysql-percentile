@@ -3,6 +3,7 @@ user-defined aggregate function to calculate percentiles in a MySQL query, simil
 
 Compile with:
 gcc -fPIC -Wall -I /usr/include/mysql51/mysql/ -shared -o udf_percentile.so  udf_percentile.cc
+(to get the include files, you need to install the mysql-devel package, as in "yum install mysql-devel")
 
 Copy to the plugin directory of MySQL (SHOW VARIABLES LIKE 'plugin_dir')
 cp udf_percentile.so /usr/lib64/mysql/plugin
